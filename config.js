@@ -10,17 +10,31 @@ var config = {
 			"type": "text",
 			"placeholder": "The directive f'(x)"
 		},
+		"precision": {
+			"name": "Precision",
+			"type": "number",
+			"placeholder": "How precise you want it to be"
+		},
 		"initial": {
-			"id": "initial",
 			"name": "Iteration initial",
 			"type": "number",
 			"placeholder": "The very first value for iteration"
+		},
+		"min": {
+			"name": "Minimum",
+			"type": "number",
+			"placeholder": "The lowest limit of solution range"
+		},
+		"max": {
+			"name": "Maximum",
+			"type": "number",
+			"placeholder": "The highest limit of solution range"
 		}
 	},
 	"profiles": {
 		"bisection": {
 			"name": "Bisection",
-			"input": ["function", "initial"]
+			"input": ["function", "precision", "min", "max"]
 		},
 		"iteration": {
 			"name": "Iteration",

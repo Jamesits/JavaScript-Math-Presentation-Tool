@@ -12,4 +12,5 @@ document.getElementById('editor').style.fontSize='12px';
 $.get( "programs/" + get_current_profile() + ".js", function( data ) {
 	editor.setValue(data);
 	editor.getSession().setMode("ace/mode/javascript");
+	editor.clearSelection();
 });

@@ -1,19 +1,4 @@
-      // Basic function define
-var sin = Math.sin;
-var cos = Math.cos;
-var tan = Math.tan;
-var asin = Math.asin;
-var acos = Math.acos;
-var atan = Math.atan;
-var log = Math.log;
-var ln = function(x){return Math.log(x, Math.exp(1));}
-var pow = Math.pow;
-
-// Evaluate a function
-feval = function(func, val){r = eval(func.replace(/x/gi, val)); return r;}
-
-// calculate
-count = function(eps, length){
+function count(eps, length){
 	return Math.floor(Math.log(length / eps, 2) - 1.0) + 1;
 }
 
@@ -55,12 +40,11 @@ bisection = function(func, a, b, iter_times) {
 	return x_middle;
 }
 
-function run() {
-	func = $("#func").val();
-	eps = $("#prec").val();
-	a = $("#min").val();
-	b = $("#max").val();
+function get_result() {
+	func = formdata["function"];
+	eps = formdata["precision"];
+	a = formdata["min"];
+	b = formdata["max"];
 	x = bisection(func, a, b, count(eps, b - a));
-	//console.log(x);
-	$("#result").text(String(x));
+	return String(x);
 }

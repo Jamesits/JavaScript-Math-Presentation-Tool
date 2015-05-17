@@ -15,7 +15,7 @@ function get_form_data(){
 			formdata[compiled_config.profiles[current_profile].input[i]] = $("#" + compiled_config.profiles[current_profile].input[i]).val();
 		}
 	}
-    console.log(formdata);
+    //console.log(formdata);
 }
 
 // Evaluate a function
@@ -23,5 +23,11 @@ function feval(func, val) {return eval(func.replace(/x/gi, val));}
 
 function execute_prog() {
     get_form_data();
-	//$.get( "programs/" + get_current_profile() + ".js", function(data) {});
+	$.get( "programs/" + get_current_profile() + ".js", function(data) {
+		eval(data);
+		r = get_result();
+		//console.log(r);
+		$("#result").text(String(r));
+	});
 }
+
