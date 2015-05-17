@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-cn">
 <head>
 	<title>JavaScript Math Presentation Tool</title>
 	<meta charset="utf-8">
@@ -15,13 +15,8 @@
             <a class="navbar-brand" href="#">JavaScript Math Presentation Tool</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
-            <script type="text/x-mustache" id="template-navbar-method">
-                {{#profiles}}
-                    <li><a href="#{{id}}">{{name}}</a></li>
-                {{/profiles}}
-            </script>
           <ul id="navbar-method" class="nav navbar-nav">
-
+            <!-- -->
           </ul>
           <ul class="nav navbar-nav navbar-right"> 
             <li><a href="#">About</a></li>
@@ -37,23 +32,31 @@
 			</div>
 			<div class="col-md-4">
 				<form>
-                    <div class="form-group">
-                        <label for="inputFunction">Function: </label>
-                        <input type="text" class="form-control" id="inputFunction" placeholder="Enter a valid math expression">
-                    </div>
-                    <div class="form-group">
-                        <label for="inputDirective">Directive: </label>
-                        <input type="text" class="form-control" id="inputDirective" placeholder="The directive of function">
-                    </div>
-                    <div class="form-group">
-                        <label for="inputInitial">Initial value: </label>
-                        <input type="number" class="form-control" id="inputInitial" placeholder="The first value to be calculated">
-                    </div>
+                    <div id="input-form"></div>
                     <button type="button" class="btn btn-default">Run</button>
                 </form>
+                <div>
+                    <label for="result">Result: </label>
+                    <code id="result"></code>
+                </div>
 			</div>
 		</div>
 	</div> <!-- /container -->
+
+    <!-- Templates -->
+    <script type="text/x-mustache" id="template-navbar-method">
+        {{#navbar}}
+            <li><a href="#{{id}}">{{name}}</a></li>
+        {{/navbar}}
+    </script>
+    <script type="text/x-mustache" id="template-input-form">
+        {{#form}}
+            <div class="form-group">
+                <label for="#{{id}}">{{name}}: </label>
+                <input type="{{type}}" class="form-control" id="{{id}}" placeholder="{{placeholder}}">
+            </div>
+        {{/form}}
+    </script>
 
     <script src="assets/js/jquery-1.11.3.min.js"></script>
 	<script src="bootstrap/dist/js/bootstrap.min.js"></script>
