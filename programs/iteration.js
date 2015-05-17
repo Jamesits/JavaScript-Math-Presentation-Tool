@@ -14,5 +14,5 @@ function get_result() {
 	x0 = formdata["initial"];
 	maxi = formdata["maxi"];
 	x = iteration(func, x0, eps, maxi);
-	return String(x);
+	return x;
 }

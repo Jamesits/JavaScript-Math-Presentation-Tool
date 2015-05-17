@@ -2,7 +2,7 @@ function count(eps, length){
 	return Math.floor(Math.log(length / eps, 2) - 1.0) + 1;
 }
 
-bisection = function(func, a, b, iter_times) {
+function bisection(func, a, b, iter_times) {
 	lval = feval(func, a);
 	rval = feval(func, b);
 	if (lval == 0) {
@@ -12,7 +12,6 @@ bisection = function(func, a, b, iter_times) {
 		return b, 0;
 	}
 	else if (lval * rval > 0){
-		console.log("No solution");
 		return undefined;
 	}
 
@@ -46,5 +45,5 @@ function get_result() {
 	a = formdata["min"];
 	b = formdata["max"];
 	x = bisection(func, a, b, count(eps, b - a));
-	return String(x);
+	return x;
 }

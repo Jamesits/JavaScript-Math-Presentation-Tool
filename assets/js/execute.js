@@ -29,7 +29,8 @@ function execute_prog() {
 		eval(data);
 		r = get_result();
 		//console.log(r);
-		$("#result").text(String(r));
+		if (r != undefined) $("#result").text(String(r));
+		else $("#result").text("No solution!");
 	});
 }
 

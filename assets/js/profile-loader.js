@@ -64,6 +64,7 @@ function run_file(){
 	$("#run").attr("disabled", "disabled");
 	execute_prog();
 	$("#run").removeAttr("disabled");
+	$("#dresult").removeClass("hidden");
 }
 
 // Fill nav bar

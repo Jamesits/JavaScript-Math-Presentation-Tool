@@ -31,14 +31,14 @@
                 <label for="editor">Code</label>
 				<iframe id="editor" src=""></iframe>
 			</div>
-			<div class="col-md-4">
+			<div class="col-md-4 jumbotron">
 				<form id="userdata">
                     <div id="input-form"></div>
                     <button type="button" id="run" class="btn btn-default" disabled="disabled" onclick="run_file()">Run</button>
                 </form>
-                <div id="dresult">
+                <div id="dresult" class="hidden">
                     <label for="result">Result: </label>
-                    <code id="result"></code>
+                    <samp id="result"></samp>
                 </div>
 			</div>
 		</div>
