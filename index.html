@@ -5,22 +5,23 @@
 	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	<!-- Bootstrap 3 -->
 	<link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css">
 	<link rel="stylesheet" href="assets/css/index.css">
 </head>
 <body>
-	
-	<!-- Static navbar -->
     <nav class="navbar navbar-default navbar-static-top">
-      <div class="container">
+      <div class="container-fluid">
         <div class="navbar-header">
             <a class="navbar-brand" href="#">JavaScript Math Presentation Tool</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Test Method 1</a></li>
-            <li><a href="#">Test Method 2</a></li>
+            <script type="text/x-mustache" id="template-navbar-method">
+                {{#profiles}}
+                    <li><a href="#{{id}}">{{name}}</a></li>
+                {{/profiles}}
+            </script>
+          <ul id="navbar-method" class="nav navbar-nav">
+
           </ul>
           <ul class="nav navbar-nav navbar-right"> 
             <li><a href="#">About</a></li>
@@ -54,9 +55,9 @@
 		</div>
 	</div> <!-- /container -->
 
-    <!-- jQuery -->
     <script src="assets/js/jquery-1.11.3.min.js"></script>
-	<!-- Bootstrap 3 -->
 	<script src="bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="mustache/mustache.min.js"></script>
+    <script src="assets/js/profile-loader.js"></script>
 </body>
 </html>
