@@ -40,10 +40,15 @@ var config = {
 			"name": "插值点",
 			"type": "number",
 			"placeholder": "Where you want to get a y"
+		},
+		"step": {
+			"name": "步长",
+			"type": "number",
+			"placeholder": "How much you add every time"
 		}
 	},
 	"profiles": {
-		// 方法
+		// 方法，名称对应 programs/ 目录下的 js 文件名
 		"bisection": {
 			"name": "二分法",
 			"input": ["function", "precision", "min", "max"]
@@ -74,10 +79,10 @@ var config = {
 		},
 		"newtoninsert": {
 			"name": "牛顿插值法",
-			"input": ["insertpoint"],
+			"input": ["insertpoint", "initial", "step", "maxi"],
 			"extendeddata": {
-				"name": "插值点和插值点函数值",
-				"placeholder": "x\t\tf(x)"
+				"name": "插值点函数值",
+				"placeholder": "f(x)"
 			}
 		}
 	}

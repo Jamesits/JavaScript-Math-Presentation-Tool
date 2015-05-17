@@ -2,7 +2,7 @@ var a = [], b = [], c = [];
 
 function process_input(m) {
 	dataset = m.split("\n");
-	for (i in dataset) {
+	for (var i in dataset) {
 		if (dataset.hasOwnProperty(i)) {
             d = dataset[i].split(" ");
             a.push(d[0]);
