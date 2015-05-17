@@ -62,7 +62,7 @@ function get_file(){
 
 function run_file(){
 	$("#run").attr("disabled", "disabled");
-	alert("run!");
+	execute_prog();
 	$("#run").removeAttr("disabled");
 }
 
