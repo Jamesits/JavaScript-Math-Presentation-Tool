@@ -1,38 +1,3 @@
-var config = {
-	"inputs": {
-		"function": {
-			"name": "Function",
-			"type": "text",
-			"placeholder": "Vaild math expression f(x), assuming f(x) = 0"
-		},
-		"directive": {
-			"name": "Directive",
-			"type": "text",
-			"placeholder": "The directive f'(x)"
-		},
-		"initial": {
-			"id": "initial",
-			"name": "Iteration initial",
-			"type": "number",
-			"placeholder": "The very first value for iteration"
-		}
-	},
-	"profiles": {
-		"bisection": {
-			"name": "Bisection",
-			"input": ["function", "initial"]
-		},
-		"iteration": {
-			"name": "Iteration",
-			"input": ["function", "initial"]
-		},
-		"newton": {
-			"name": "Newton Method",
-			"input": ["function", "directive", "initial"]
-		}
-	}
-};
-
 // auto fix config
 var compiled_config = {
 	"inputs": [],
@@ -91,10 +56,23 @@ function refresh() {
 	location.reload();
 }
 
+function get_file(){
+	
+}
+
+function run_file(){
+	$("#run").attr("disabled", "disabled");
+	alert("run!");
+	$("#run").removeAttr("disabled");
+}
+
 // Fill nav bar
 navbar_templates = $("#template-navbar-method").html();
 $("#navbar-method").html(Mustache.render(navbar_templates, compiled_config));
 current_profile = get_current_profile();
+
+// load editor
+$("#editor").attr("src", "editor.html#" + current_profile);
 
 // Construct input form
 input_templates = $("#template-input-form").html();
@@ -102,3 +80,5 @@ $("#input-form").html(Mustache.render(input_templates, compiled_config.profiles[
 
 console.log(config);
 console.log(compiled_config);
+
+$("#run").removeAttr("disabled");

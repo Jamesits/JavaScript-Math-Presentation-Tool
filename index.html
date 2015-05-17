@@ -28,12 +28,13 @@
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-md-8">
-				<iframe src="editor.html"></iframe>
+                <label for="editor">Code</label>
+				<iframe id="editor" src=""></iframe>
 			</div>
 			<div class="col-md-4">
 				<form>
                     <div id="input-form"></div>
-                    <button type="button" class="btn btn-default">Run</button>
+                    <button type="button" id="run" class="btn btn-default" disabled="disabled" onclick="run_file()">Run</button>
                 </form>
                 <div>
                     <label for="result">Result: </label>
@@ -61,6 +62,7 @@
     <script src="assets/js/jquery-1.11.3.min.js"></script>
 	<script src="bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="mustache/mustache.min.js"></script>
+    <script src="config.js"></script>
     <script src="assets/js/profile-loader.js"></script>
 </body>
 </html>
