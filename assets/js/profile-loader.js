@@ -78,6 +78,11 @@ $("#editor").attr("src", "editor.html#" + current_profile);
 // Construct input form
 input_templates = $("#template-input-form").html();
 $("#input-form").html(Mustache.render(input_templates, compiled_config.profiles[current_profile]));
+if (compiled_config.profiles[current_profile].extendeddata != undefined) {
+	$("#lextended-data").text(compiled_config.profiles[current_profile].extendeddata.name + ": ");
+	$("#extended-data").attr("placeholder", compiled_config.profiles[current_profile].extendeddata.placeholder);
+	$("#dextended-data").removeClass("hidden");
+}
 
 //console.log(config);
 //console.log(compiled_config);

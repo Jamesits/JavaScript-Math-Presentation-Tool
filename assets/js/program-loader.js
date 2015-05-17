@@ -7,7 +7,7 @@ var editor = ace.edit("editor");
 editor.setReadOnly(true);
 editor.getSession().setTabSize(4);
 document.getElementById('editor').style.fontSize='12px';
-editor.$blockScrolling = Infinity
+editor.$blockScrolling = Infinity;
 
 // load file
 $.get( "programs/" + get_current_profile() + ".js", function( data ) {

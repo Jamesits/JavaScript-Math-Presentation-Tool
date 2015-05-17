@@ -17,6 +17,7 @@ function get_form_data(){
 			formdata[compiled_config.profiles[current_profile].input[i]] = $("#" + compiled_config.profiles[current_profile].input[i]).val();
 		}
 	}
+	formdata["extendeddata"] = $("#extended-data").val();
     //console.log(formdata);
 }
 
