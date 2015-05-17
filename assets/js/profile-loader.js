@@ -78,7 +78,7 @@ $("#editor").attr("src", "editor.html#" + current_profile);
 input_templates = $("#template-input-form").html();
 $("#input-form").html(Mustache.render(input_templates, compiled_config.profiles[current_profile]));
 
-console.log(config);
-console.log(compiled_config);
+//console.log(config);
+//console.log(compiled_config);
 
 $("#run").removeAttr("disabled");

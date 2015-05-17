@@ -6,12 +6,17 @@ body {
 	margin-bottom: 19px;
 }
 
+#deditor {
+	height: 600px;
+}
+
 iframe {
     border: 0px;
     width: 100%;
-    min-height: 600px;
+    min-height: 80%;
 }
 
 #dresult {
 	margin-top: 10px;
 }
+
