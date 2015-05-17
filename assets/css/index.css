@@ -1,0 +1,13 @@
+body {
+	/*min-height: 2000px;*/
+}
+
+.navbar-static-top {
+	margin-bottom: 19px;
+}
+
+iframe {
+    border: 0px;
+    width: 100%;
+    min-height: 800px;
+}

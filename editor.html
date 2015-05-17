@@ -2,15 +2,7 @@
 <html lang="en">
 <head>
 <title>ACE in Action</title>
-<style type="text/css" media="screen">
-    #editor { 
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-    }
-</style>
+<link rel="stylesheet" href="assets/css/editor.css">
 </head>
 <body>
 
@@ -22,7 +14,7 @@
 <script src="ace-builds/src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
 <script>
     var editor = ace.edit("editor");
-    editor.setTheme("ace/theme/twilight");
+    editor.setTheme("ace/theme/monokai");
     editor.getSession().setMode("ace/mode/javascript");
     editor.getSession().setTabSize(4);
     document.getElementById('editor').style.fontSize='12px';
