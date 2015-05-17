@@ -7,6 +7,8 @@ var atan = Math.atan;
 var log = Math.log;
 var ln = function(x){return Math.log(x, Math.exp(1));}
 var pow = Math.pow;
+var abs = Math.abs;
+
 var formdata = {};
 
 function get_form_data(){

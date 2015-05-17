@@ -29,6 +29,11 @@ var config = {
 			"name": "Maximum",
 			"type": "number",
 			"placeholder": "The highest limit of solution range"
+		},
+		"maxi": {
+			"name": "Max iteration times",
+			"type": "number",
+			"placeholder": "How much time you want to iterate if didn't found a solution"
 		}
 	},
 	"profiles": {
@@ -38,11 +43,11 @@ var config = {
 		},
 		"iteration": {
 			"name": "Iteration",
-			"input": ["function", "initial"]
+			"input": ["function", "precision", "initial", "maxi"]
 		},
 		"newton": {
 			"name": "Newton Method",
-			"input": ["function", "directive", "initial"]
+			"input": ["function", "directive", "precision", "initial", "maxi"]
 		}
 	}
 };
