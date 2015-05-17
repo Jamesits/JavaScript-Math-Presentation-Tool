@@ -87,6 +87,10 @@ function get_current_profile() {
 	return window.location.hash.slice(1);
 }
 
+function refresh() {
+	location.reload();
+}
+
 // Fill nav bar
 navbar_templates = $("#template-navbar-method").html();
 $("#navbar-method").html(Mustache.render(navbar_templates, compiled_config));
