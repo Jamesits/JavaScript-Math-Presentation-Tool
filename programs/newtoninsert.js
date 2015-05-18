@@ -32,18 +32,18 @@ function newton_insert(x0, h, f, _x) {
 }
 
 function get_result() {
-	x0 = formdata["initial"];
-	h = formdata["step"];
-	_x = formdata["insertpoint"];
-	max = formdata["maxi"];
-	matrix = formdata["extendeddata"];
-    d = matrix.split("\n");
+	var x0 = formdata['initial'];
+	var h = formdata['step'];
+	var _x = formdata['insertpoint'];
+	var maxi = formdata['maxi'];
+	var matrix = formdata['extendeddata'];
+    var d = matrix.split("\n");
     var f = createArray(maxi, maxi);
     for (var i in d) {
         if (d.hasOwnProperty(i)) {
             f[i][0] = d[i];
         }
     }
-	x = newton_insert(x0, h, f, _x);
+	var x = newton_insert(x0, h, f, _x);
 	return x;
 }

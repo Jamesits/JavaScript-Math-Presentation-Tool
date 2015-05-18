@@ -5,15 +5,16 @@ function newton(func, prime_func, x0, eps, maxi) {
         if (abs(x[x.length-1]-x[x.length-2])<eps)
             break;
 	}
+	console.log(x);
     return x[x.length-1];
 }
 
 function get_result() {
-	var func = formdata["function"];
-	var prime_func = formdata["directive"];
-	var eps = formdata["precision"];
-	var x0 = formdata["initial"];
-	var maxi = formdata["maxi"];
+	var func = formdata['function'];
+	var prime_func = formdata['directive'];
+	var eps = formdata['precision'];
+	var x0 = formdata['initial'];
+	var maxi = formdata['maxi'];
 	var x = newton(func, prime_func, x0, eps, maxi);
 	return x;
 }

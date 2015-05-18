@@ -73,6 +73,7 @@ $('form#userdata').submit(function() {
 var navbar_templates = $("#template-navbar-method").html();
 $("#navbar-method").html(Mustache.render(navbar_templates, compiled_config));
 var current_profile = get_current_profile();
+$(window.location.hash).addClass("active");
 
 // load editor
 $("#editor").attr("src", "editor.html#" + current_profile);

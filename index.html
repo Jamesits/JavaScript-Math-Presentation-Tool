@@ -12,7 +12,7 @@
     <nav class="navbar navbar-default navbar-static-top">
       <div class="container-fluid">
         <div class="navbar-header">
-            <a class="navbar-brand" href="#">JavaScript Math Presentation Tool</a>
+            <a class="navbar-brand">JavaScript Math Presentation Tool</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul id="navbar-method" class="nav navbar-nav">
@@ -51,7 +51,7 @@
     <!-- Templates -->
     <script type="text/x-mustache" id="template-navbar-method">
         {{#navbar}}
-            <li><a href="#{{id}}" onclick="refresh()">{{name}}</a></li>
+            <li id="{{id}}"><a href="#{{id}}" onclick="refresh()">{{name}}</a></li>
         {{/navbar}}
     </script>
     <script type="text/x-mustache" id="template-input-form">

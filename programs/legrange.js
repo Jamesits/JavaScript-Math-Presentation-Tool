@@ -1,10 +1,10 @@
 var a = [], b = [];
 
 function process_input(m) {
-	dataset = m.split("\n");
+	var dataset = m.split("\n");
 	for (var i in dataset) {
 		if (dataset.hasOwnProperty(i)) {
-            d = dataset[i].split(" ");
+            var d = dataset[i].split(" ");
             a.push(d[0]);
             b.push(d[1]);
         }
@@ -32,9 +32,9 @@ function legrange(x, y, _x) {
 }
 
 function get_result() {
-	_x = formdata["insertpoint"];
-	matrix = formdata["extendeddata"];
+	var _x = formdata['insertpoint'];
+	var matrix = formdata['extendeddata'];
     process_input(matrix);
-	x = legrange(a, b, _x);
+	var x = legrange(a, b, _x);
 	return x;
 }

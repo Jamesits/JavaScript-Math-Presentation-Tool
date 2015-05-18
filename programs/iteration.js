@@ -10,10 +10,10 @@ function iteration(func, x0, eps, maxi) {
 }
 
 function get_result() {
-	var func = formdata["function"];
-	var eps = formdata["precision"];
-	var x0 = formdata["initial"];
-	var maxi = formdata["maxi"];
+	var func = formdata['function'];
+	var eps = formdata['precision'];
+	var x0 = formdata['initial'];
+	var maxi = formdata['maxi'];
 	var x = iteration(func, x0, eps, maxi);
 	return x;
 }

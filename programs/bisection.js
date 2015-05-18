@@ -40,10 +40,10 @@ function bisection(func, a, b, iter_times) {
 }
 
 function get_result() {
-	var func = formdata["function"];
-	var eps = formdata["precision"];
-	var a = formdata["min"];
-	var b = formdata["max"];
+	var func = formdata['function'];
+	var eps = formdata['precision'];
+	var a = formdata['min'];
+	var b = formdata['max'];
 	var x = bisection(func, a, b, count(eps, b - a));
 	return x;
 }
