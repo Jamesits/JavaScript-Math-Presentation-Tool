@@ -86,7 +86,7 @@ if (compiled_config.profiles[current_profile].extendeddata != undefined) {
 	$("#dextended-data").removeClass("hidden");
 }
 
-console.log(config);
-console.log(compiled_config);
+//console.log(config);
+//console.log(compiled_config);
 
 $("#run").removeAttr("disabled");

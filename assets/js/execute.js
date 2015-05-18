@@ -6,7 +6,7 @@ var asin = Math.asin;
 var acos = Math.acos;
 var atan = Math.atan;
 var log = Math.log;
-var ln = function(x){return Math.log(x, Math.exp(1));}
+var ln = function(x){return Math.log(x, Math.exp(1));};
 var pow = Math.pow;
 var abs = Math.abs;
 
@@ -16,7 +16,7 @@ function get_form_data(){
 	for (var i in compiled_config.profiles[current_profile].input) {
 		if (compiled_config.profiles[current_profile].input.hasOwnProperty(i)) {
 			var r = $("#" + compiled_config.profiles[current_profile].input[i]).val();
-			console.log(compiled_config.profiles[current_profile].input[i]);
+			//console.log(compiled_config.profiles[current_profile].input[i]);
 			if (config.inputs[compiled_config.profiles[current_profile].input[i]].type == "number") {
 				formdata[compiled_config.profiles[current_profile].input[i]] = parseFloat(r);
 			} else {

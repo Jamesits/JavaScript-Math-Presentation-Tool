@@ -1,6 +1,6 @@
 function newton(func, prime_func, x0, eps, maxi) {
-    x=[x0];
-    for (i = 0; i < maxi; i++) {
+    var x=[x0];
+    for (var i = 0; i < maxi; i++) {
         x.push(x[x.length-1]-feval(func,x[x.length-1])/feval(prime_func,x[x.length-1]));
         if (abs(x[x.length-1]-x[x.length-2])<eps)
             break;
@@ -9,11 +9,11 @@ function newton(func, prime_func, x0, eps, maxi) {
 }
 
 function get_result() {
-	func = formdata["function"];
-	prime_func = formdata["directive"];
-	eps = formdata["precision"];
-	x0 = formdata["initial"];
-	maxi = formdata["maxi"];
-	x = newton(func, prime_func, x0, eps, maxi);
+	var func = formdata["function"];
+	var prime_func = formdata["directive"];
+	var eps = formdata["precision"];
+	var x0 = formdata["initial"];
+	var maxi = formdata["maxi"];
+	var x = newton(func, prime_func, x0, eps, maxi);
 	return x;
 }
