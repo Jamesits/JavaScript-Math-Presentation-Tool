@@ -1,3 +1,4 @@
+/// <reference path="../../typings/jquery/jquery.d.ts"/>
 var sin = Math.sin;
 var cos = Math.cos;
 var tan = Math.tan;
@@ -12,9 +13,16 @@ var abs = Math.abs;
 var formdata = {};
 
 function get_form_data(){
-	for (i in compiled_config.profiles[current_profile].input) {
+	for (var i in compiled_config.profiles[current_profile].input) {
 		if (compiled_config.profiles[current_profile].input.hasOwnProperty(i)) {
-			formdata[compiled_config.profiles[current_profile].input[i]] = $("#" + compiled_config.profiles[current_profile].input[i]).val();
+			var r = $("#" + compiled_config.profiles[current_profile].input[i]).val();
+			console.log(compiled_config.profiles[current_profile].input[i]);
+			if (config.inputs[compiled_config.profiles[current_profile].input[i]].type == "number") {
+				formdata[compiled_config.profiles[current_profile].input[i]] = parseFloat(r);
+			} else {
+				formdata[compiled_config.profiles[current_profile].input[i]] = r;
+			}
+			
 		}
 	}
 	formdata["extendeddata"] = $("#extended-data").val();
@@ -28,7 +36,7 @@ function execute_prog() {
     get_form_data();
 	$.get( "programs/" + get_current_profile() + ".js", function(data) {
 		eval(data);
-		r = get_result();
+		var r = get_result();
 		//console.log(r);
 		if (r != undefined) $("#result").text(String(r));
 		else $("#result").text("No solution!");

@@ -1,3 +1,4 @@
+/* global ace */
 function get_current_profile() {
 	return window.location.hash.slice(1);
 }
