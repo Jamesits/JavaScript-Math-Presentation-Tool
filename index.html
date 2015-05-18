@@ -38,7 +38,7 @@
                         <label id="lextended-data" for="extended-data">Extended data: </label>
                         <textarea id="extended-data" class="form-control" rows="10"></textarea>
                     </div>
-                    <button type="button" id="run" class="btn btn-default" disabled="disabled" onclick="run_file()">Run</button>
+                    <button type="submit" id="run" class="btn btn-default" disabled="disabled" onclick="run_file()">Run</button>
                 </form>
                 <div id="dresult" class="hidden">
                     <label for="result">Result: </label>
@@ -58,7 +58,7 @@
         {{#form}}
             <div class="form-group">
                 <label for="#{{id}}">{{name}}: </label>
-                <input type="{{type}}" class="form-control" id="{{id}}" placeholder="{{placeholder}}">
+                <input type="{{type}}" step="any" class="form-control" id="{{id}}" placeholder="{{placeholder}}">
             </div>
         {{/form}}
     </script>

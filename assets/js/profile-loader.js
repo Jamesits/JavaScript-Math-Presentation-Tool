@@ -64,6 +64,11 @@ function run_file(){
 	$("#dresult").removeClass("hidden");
 }
 
+$('form#userdata').submit(function() { 
+    run_file();
+    return false;
+});
+
 // Fill nav bar
 var navbar_templates = $("#template-navbar-method").html();
 $("#navbar-method").html(Mustache.render(navbar_templates, compiled_config));
