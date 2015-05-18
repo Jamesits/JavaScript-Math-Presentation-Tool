@@ -54,7 +54,7 @@ function get_current_profile() {
 }
 
 function refresh() {
-	location.reload();
+	//location.reload();
 }
 
 function run_file(){
@@ -74,7 +74,9 @@ var navbar_templates = $("#template-navbar-method").html();
 $("#navbar-method").html(Mustache.render(navbar_templates, compiled_config));
 var current_profile = get_current_profile();
 $(window.location.hash).addClass("active");
-
+window.onhashchange = function() {
+	window.location.reload();
+}
 // load editor
 $("#editor").attr("src", "editor.html#" + current_profile);
 
